@@ -95,6 +95,28 @@ func (L *LinkedList) Delete(e int)  {
 		}
 	}
 }
+//删除链表的第 n 个节点
+func(L *LinkedList) removeNthFromEnd(n int) bool{
+	var count = 1
+	pre := L.Head
+	if n <= 0 {
+		return false
+	}else if n == 1 {
+		L.Head = pre.Next
+		return true
+	}else {
+		for pre.Next != nil {
+			if count == n-1 {
+				pre.Next = pre.Next.Next
+				break
+			}else {
+				pre = pre.Next
+				count++
+			}
+		}
+		return true
+	}
+}
 //遍历
 func (L *LinkedList) ShowList(){
 	if L.IsEmpty() != true {
