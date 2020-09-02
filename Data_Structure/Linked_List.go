@@ -142,7 +142,7 @@ func main() {
 	for i := 6; i < 11; i++ {
 		MyList = Append(MyList,i)
 	}
-	//show
+	//showList
 	MyList = Insert(MyList,5,11)
 	fmt.Println("Length:",Length(MyList))
 	fmt.Println("IsEmpty:",IsEmpty(MyList))
