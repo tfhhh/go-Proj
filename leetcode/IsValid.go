@@ -1,7 +1,7 @@
 package main
 
 import "fmt"
-
+//字符串里的括号是否匹配
 func isValid(s string) bool {
 	if s == "" {
 		return true
